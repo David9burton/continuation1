@@ -14,4 +14,16 @@ car1 = Car()
 print(car1.display_details())
 print(car1.honk())
 
+class ElectricCar(Car):
+    def __init__(self):
+        super().__init__()
+        self.battery_capacity = input("Enter the battery capacity (kWh): ")
+
+    def display_battery_status(self):
+        return f"Battery Capacity: {self.battery_capacity} kWh"
+
+e_car = ElectricCar()
+print(e_car.display_details())
+print(e_car.display_battery_status())
+
 
